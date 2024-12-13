@@ -1,0 +1,145 @@
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: rgb(121, 116, 116);
+}
+
+header {
+    background-color: rgb(87, 85, 85);
+    margin: 0;
+    margin-bottom: 2em;
+    margin-top: 0;
+    padding: 0;
+    height: 10em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.grille {
+    max-width: 600px;
+    max-height: 600px;
+    margin: auto;
+    margin-top: 5em;
+    flex-direction: column;
+}
+
+.ligne {
+    display: flex;
+}
+
+.blockGris {
+    background-color: rgb(59, 58, 58);
+    border: 2px solid rgb(87, 85, 85);
+    img {
+        width: 80%;
+        height: 80%;
+        margin: auto;
+    }
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.blockBlanc {
+    background-color: rgb(173, 161, 161);
+    border: 2px solid rgb(87, 85, 85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes clignote {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.blockRouge {
+    background-color: rgb(167, 38, 38);
+    border: 2px solid rgb(87, 85, 85);
+
+    animation: clignote 0.3s infinite;
+}
+
+.blockRouge1 {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(136, 27, 27);
+    border: 5px solid rgb(8, 8, 8);
+    box-shadow: 3px 3px 3px rgb(26, 25, 25);
+}
+
+@keyframes bouge {
+    0% {top: 400px;}
+    25% {top: 300px;}
+    50% {top: 400px;}
+    50% {top: 300px;}
+    100% {top: 400px;}
+}
+
+.victoire {
+    position: absolute;
+    left: 40em;
+    animation: bouge 1s infinite;
+    display: none;
+}
+
+.level {
+    width: 400px;
+    height: 200px;
+    margin-top: 2em;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(65, 63, 63, 0.534);
+    border-radius: 20px;
+    input {
+        width: 50px;
+        height: 70px;
+        background-color: rgb(128, 122, 116);
+        border-radius: 15px;
+        border: 2px solid black;
+        font-size: xx-large;
+        text-align: center;
+    }
+    .start-btn{
+        text-align: center;
+        display: inline-block;
+        margin:5px;
+        font-weight: bold;
+        padding: 10px 10px 10px 10px ;
+        background-color: lightgray;
+        text-shadow: -1px -1px black, 1px 1px white;
+        color: gray;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -o-border-radius: 7px;
+        border-radius: 7px;
+        box-shadow: 0 .2em gray; 
+        cursor: pointer;
+    }
+    label {
+        font-weight: bold;
+        font-size: x-large;
+        text-shadow: -1px -1px black, 1px 1px rgb(87, 84, 84);
+        color: rgb(20, 19, 19);
+    }
+}
+
+@keyframes app {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+.over {
+    position: absolute;
+    top: 0;
+    left: 30%;
+    display: none;
+}
